@@ -1,3 +1,6 @@
+This project develops invertible embedding-based receivers for insertion-deletion-substitution (IDS) channels. The main goal is to learn a robust embedding representation that enables recovery of transmitted messages despite synchronization errors such as insertions, deletions, and substitutions. The framework includes several decoding setups, including a direct embedding-based decoder, embedding-assisted neural decoding, and hybrid classical decoding with BCJR and soft-Viterbi. This allows us to compare baseline, neural, and hybrid receivers under the same IDS channel setting.
+
+
 In our experiments, we use the following IDS setting:
 
 - insertion probability: `p_ins = 0.01, 0.02, 0.03`
