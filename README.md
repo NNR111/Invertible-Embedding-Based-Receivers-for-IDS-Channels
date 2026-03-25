@@ -465,11 +465,3 @@ python -m ids_receiver.eval.evaluate_conv_embed_bcjr_softviterbi \
   --num_blocks 20 \
   --out_csv runs_embed_bcjr_viterbi/eval_conv_embed_bcjr_softviterbi_curriculum.csv
 ```
-
-
-git config --global user.name "NNR111"
-git config --global user.email "naufalrafi781@gmail.com"
-git add -A
-git commit -m "Invertible-Embedding-for-IDS-Channels"
-git push --set-upstream origin main
-
