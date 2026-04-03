@@ -20,7 +20,7 @@ In our experiments, we use the following IDS setting:
 
 - insertion probability: `p_ins ∈ {0.01, 0.02, 0.03}`
 - deletion probability: `p_del ∈ {0.01, 0.02, 0.03}`
-- substitution probability for evaluation: `p_sub ∈ {0.01, 0.02, 0.03, 0.04, 0.05}`
+- substitution probability for evaluation: `p_sub ∈ {0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10}`
 
 For training:
 
@@ -38,7 +38,7 @@ So the recommended curriculum is:
 with
 
 - `p_sub_train_min=0.01`
-- `p_sub_train_max=0.05`
+- `p_sub_train_max=0.10`
 
 for all stages.
 
@@ -590,7 +590,7 @@ For evaluation, use:
 
 - `p_ins ∈ {0.01, 0.02, 0.03}`
 - `p_del ∈ {0.01, 0.02, 0.03}`
-- `p_sub_list = 0.01,0.02,0.03,0.04,0.05`
+- `p_sub_list = 0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10`
 
 ## A. Proposed direct decoder
 
@@ -617,7 +617,7 @@ python -m ids_receiver.eval.evaluate_embed \
   --ckpt runs_embed/decoder_stage3/best.pt \
   --p_ins 0.03 \
   --p_del 0.03 \
-  --p_sub_list 0.01,0.02,0.03,0.04,0.05 \
+  --p_sub_list 0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10 \
   --n_trials 3000 \
   --batch_size 256 \
   --use_marker 1 \
@@ -650,14 +650,11 @@ python -m ids_receiver.eval.evaluate_noembed \
 
 ```bash
 python -m ids_receiver.eval.evaluate_conv_bcjr_softviterbi \
-  --p_ins 0.01 \
-  --p_del 0.01 \
+  --p_ins 0.03 \
+  --p_del 0.03 \
   --p_sub_list 0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10 \
-  --n_trials 3000 \
-  --use_marker 1 \
-  --marker 0,3 \
-  --num_blocks 20 \
-  --out_csv runs_bcjr_viterbi/eval_conv_bcjr_softviterbi_original_id=1.csv
+  --n_trials 1000 \
+  --out_csv runs_bcjr_viterbi/eval_conv_bcjr_softviterbi_original_id=3.csv
 ```
 
 ---
@@ -670,10 +667,7 @@ python -m ids_receiver.eval.evaluate_conv_embed_bcjr_softviterbi \
   --prior_scale 1.0 \
   --p_ins 0.03 \
   --p_del 0.03 \
-  --p_sub_list 0.01,0.02,0.03,0.04,0.05 \
-  --n_trials 3000 \
-  --use_marker 1 \
-  --marker 0,3 \
-  --num_blocks 20 \
-  --out_csv runs_embed_bcjr_viterbi/eval_conv_embed_bcjr_softviterbi_original.csv
+  --p_sub_list 0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10 \
+  --n_trials 1000 \
+  --out_csv runs_embed_bcjr_viterbi/eval_conv_embed_bcjr_softviterbi_id=3.csv
 ```
