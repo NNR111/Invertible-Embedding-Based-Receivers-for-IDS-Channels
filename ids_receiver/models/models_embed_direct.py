@@ -46,10 +46,7 @@ class SiameseBiGRUEncoder(nn.Module):
 
 
 class LocalBitHead(nn.Module):
-    """
-    Dipertahankan hanya agar compatible dengan checkpoint embedding lama.
-    Tidak dipakai saat direct decoder training.
-    """
+
     def __init__(
         self,
         in_dim: int = GRU_HIDDEN * 2,
@@ -89,9 +86,7 @@ class LocalBitHead(nn.Module):
 
 
 class DirectBiGRUDecoder(nn.Module):
-    """
-    Decoder langsung dari encoder feature sequence, tanpa NBM.
-    """
+
     def __init__(
         self,
         in_dim: int = GRU_HIDDEN * 2,
