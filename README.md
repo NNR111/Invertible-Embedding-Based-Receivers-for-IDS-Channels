@@ -671,3 +671,7 @@ python -m ids_receiver.eval.evaluate_conv_embed_bcjr_softviterbi \
   --n_trials 1000 \
   --out_csv runs_embed_bcjr_viterbi/eval_conv_embed_bcjr_softviterbi_id=3.csv
 ```
+
+
+Pretrained:
+https://drive.google.com/drive/folders/1-ZsSszWsK-GOqhEMCUkJ9a7c_3dF0K5J?usp=sharing
