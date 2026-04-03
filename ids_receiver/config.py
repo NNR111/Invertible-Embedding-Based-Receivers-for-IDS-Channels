@@ -5,7 +5,7 @@ TERMINATE = True
 SYMBOL_ALPHABET = 4
 PAD_VALUE = 4
 
-# Marker uses in-alphabet symbols so fairness is preserved.
+
 DEFAULT_MARKER = (0, 3)
 DEFAULT_NUM_BLOCKS = 20
 
