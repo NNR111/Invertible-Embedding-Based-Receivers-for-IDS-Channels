@@ -674,4 +674,4 @@ python -m ids_receiver.eval.evaluate_conv_embed_bcjr_softviterbi \
 
 
 Pretrained:
-https://drive.google.com/drive/folders/1-ZsSszWsK-GOqhEMCUkJ9a7c_3dF0K5J?usp=sharing
+
